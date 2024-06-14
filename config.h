@@ -25,7 +25,7 @@ static const char dmenufont[]       = "Hack Nerd Font:style:medium:size=12";
 
 static const char *colors[][3]      = {
     /*                     fg       bg      border */
-    [SchemeNorm]       = { gray3,   black,  gray2 },
+    [SchemeNorm]       = { white,   black,  gray2 },
     [SchemeSel]        = { gray4,   blue,   blue  },
 };
 
@@ -36,6 +36,18 @@ static const unsigned int ulinepad	= 5;	/* horizontal padding between the underl
 static const unsigned int ulinestroke	= 2;	/* thickness / height of the underline */
 static const unsigned int ulinevoffset	= 0;	/* how far above the bottom of the bar the line should appear */
 static const int ulineall 		= 0;	/* 1 to show underline on all tags, 0 for just the active ones */
+
+static const char *tagsel[][2] = {
+	{ black, blue },
+	{ black, pink },
+	{ black, green },
+	{ black, yellow },
+	{ black, red },
+	{ black, orange },
+	{ black, white },
+	{ black, white },
+	{ black, white },
+};
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -73,7 +85,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", gray2, "-nf", gray3, "-sb", blue, "-sf", gray4, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", black, "-nf", white, "-sb", blue, "-sf", black, NULL };
 static const char *termcmd[]  = { "st", "zsh", NULL };
 static const char *cidercmd[] = {"cider", NULL};
 static const char *speedcrunchcmd[] = {"speedcrunch", NULL};

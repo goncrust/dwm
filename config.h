@@ -16,12 +16,15 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 #define ICONSPACING 8                           /* space between icon and title */
 static const int horizpadbar        = 0;        /* horizontal padding for statusbar */
 static const int vertpadbar         = 8;        /* vertical padding for statusbar */
-static const int vertpad            = 8;       /* vertical padding of bar */
-static const int sidepad            = 8;       /* horizontal padding of bar */
+static const int vertpad            = 8;        /* vertical padding of bar */
+static const int sidepad            = 8;        /* horizontal padding of bar */
 
 /* fonts */
-static const char *fonts[]          = {"Hack Nerd Font:style:medium:size=12" , "JetBrainsMono Nerd Font Mono:style:medium:size=19" };
-static const char dmenufont[]       = "Hack Nerd Font:style:medium:size=12";
+static const char *fonts[]               = {
+	"Iosevka:style:medium:size=11",
+	"Hack Nerd Font Mono:style:medium:size=19",
+};
+static const char dmenufont[]       = "Iosevka:style:medium:size=11";
 
 #include "themes/onedark.h"
 
